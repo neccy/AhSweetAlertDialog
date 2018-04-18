@@ -199,6 +199,7 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
             rotation.setFillAfter(true);
             rotation.setInterpolator(new AccelerateInterpolator());
             mErrorFrame.startAnimation(rotation);*/
+
             mErrorX.startAnimation(mErrorXInAnim);
         } else if (mAlertType == SUCCESS_TYPE) {
             mSuccessTick.startTickAnim();
