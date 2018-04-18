@@ -184,19 +184,21 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
 
     private void playAnimation () {
         if (mAlertType == ERROR_TYPE) {
-//            mErrorFrame.startAnimation(mErrorInAnim);
+            mErrorFrame.startAnimation(mErrorInAnim);
+
+           /* // 以下特效可放开
             // 获取布局的中心点位置，作为旋转的中心点
             float centerX = mErrorFrame.getWidth() / 2f;
             float centerY = mErrorFrame.getHeight() / 2f;
             // 构建3D旋转动画对象，旋转角度为0到90度，这使得ListView将会从可见变为不可见
-            final AhRotate3dAnimation rotation = new AhRotate3dAnimation(0, 90, centerX, centerY,
+            final AhRotate3dAnimation rotation = new AhRotate3dAnimation(90, 0, centerX, centerY,
                     310.0f, true);
             // 动画持续时间500毫秒
             rotation.setDuration(500);
             // 动画完成后保持完成的状态
             rotation.setFillAfter(true);
             rotation.setInterpolator(new AccelerateInterpolator());
-            mErrorFrame.startAnimation(rotation);
+            mErrorFrame.startAnimation(rotation);*/
             mErrorX.startAnimation(mErrorXInAnim);
         } else if (mAlertType == SUCCESS_TYPE) {
             mSuccessTick.startTickAnim();
